@@ -40,9 +40,44 @@ http://localhost:5173
 
 ![360° 看房](https://www.threejs3d.com/_next/static/media/Dec-15-2024%2014-13-31.a6950329.gif)
 
-<!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=6 orderedList=false} -->
-
 #### 烟花
 
 文档：https://threejs3d.com/examples/yanhua
+
 ![烟花](https://threejs3d.com/_next/static/media/Dec-26-2024%2022-23-17.6d9349f4.gif)
+
+#### 圣诞树
+
+文档：https://threejs3d.com/examples/shengdanshu
+
+![圣诞树](https://threejs3d.com/_next/static/media/Dec-27-2024%2023-26-34.ed38a098.gif)
+
+#### 卡片翻转动画
+
+文档：https://threejs3d.com/examples/card
+
+![卡片翻转动画](https://threejs3d.com/_next/static/media/Dec-28-2024%2014-30-11.dbb070d5.gif)
+
+#### 太阳系网站介绍
+
+文档：https://threejs3d.com/examples/star
+
+![太阳系网站介绍](https://threejs3d.com/_next/static/media/Oct-17-2024%2021-04-31.2b315fb5.gif)
+
+#### 下雨效果
+
+文档：https://threejs3d.com/examples/rain
+
+![下雨效果](https://threejs3d.com/_next/static/media/rain.0b13fa3b.gif)
+
+#### 鼠标联动效果
+
+文档：https://threejs3d.com/examples/connect
+
+![鼠标联动效果](https://threejs3d.com/_next/static/media/Dec-23-2024%2022-46-31.a3fca76a.gif)
+
+## 联系
+
+欢迎关注公众号：三木前端笔记，获取更多前端技术干货。
+
+也欢迎加我微信：sanmu1598，一起交流学习。
