@@ -81,3 +81,5 @@ http://localhost:5173
 欢迎关注公众号：三木前端笔记，获取更多前端技术干货。
 
 也欢迎加我微信：sanmu1598，一起交流学习。
+
+![三木前端笔记](https://gitee.com/calmound/threejs-demo/raw/main/vx.jpg)
