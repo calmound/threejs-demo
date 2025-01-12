@@ -32,7 +32,12 @@ const createEffectComposer = (scene, camera, renderer) => {
   const bloomComposer = new EffectComposer(renderer);
   bloomComposer.addPass(new RenderPass(scene, camera));
 
-  const bloomPass = new UnrealBloomPass(new THREE.Vector2(window.innerWidth, window.innerHeight), 1.5, 0.4, 0.85);
+  const bloomPass = new UnrealBloomPass(
+    new THREE.Vector2(window.innerWidth, window.innerHeight),
+    1.5,
+    0.4,
+    0.85
+  );
   bloomPass.strength = 1;
   bloomPass.radius = 0.75;
   bloomPass.threshold = 0;
@@ -101,7 +106,10 @@ const createScene = () => {
     positions[i] = (Math.random() - 0.5) * 100;
   }
 
-  particlesGeometry.setAttribute("position", new THREE.BufferAttribute(positions, 3));
+  particlesGeometry.setAttribute(
+    "position",
+    new THREE.BufferAttribute(positions, 3)
+  );
   const particlesMaterial = new THREE.PointsMaterial({
     size: 0.1,
     color: 0xffffff,
@@ -302,7 +310,11 @@ function init() {
       group.children.forEach((mesh, index) => {
         const value = data[index] / 255;
         mesh.userData.targetScale = 0.3 + value * 0.7;
-        mesh.scale.y = THREE.MathUtils.lerp(mesh.scale.y, mesh.userData.targetScale, 0.5);
+        mesh.scale.y = THREE.MathUtils.lerp(
+          mesh.scale.y,
+          mesh.userData.targetScale,
+          1.5
+        );
       });
     }
 
