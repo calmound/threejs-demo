@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Festive&display=swap");
+
+    body,
+    html,
+    #app {
+      margin: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    body {
+      background: #000;
+    }
+
+    #app {
+      overflow: hidden;
+      touch-action: pan-up;
+      color: #ffffff;
+      font-family: "Montserrat", sans-serif;
+      text-shadow: 0 0 5px #ffffff, 0 0 20px #000, 0 0 30px #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #app h1 {
+      font-size: 8rem;
+      //text-transform: uppercase;
+      font-family: "Festive", cursive;
+      filter: drop-shadow(0 0 10px rgba(0, 100, 100, 0.7)) drop-shadow(0 0 30px rgba(0, 100, 100, 0.5)) drop-shadow(0 0 50px rgba(0, 100, 100, 0.3));
+      animation: gradientMove 10s ease infinite, float 3s ease-in-out infinite;
+    }
+
+    #app a {
+      text-decoration: none;
+      color: #fff;
+    }
+
+    #app canvas {
+      display: block;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+
+    #fullscreenBtn {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      background: rgba(255, 255, 255, 0.2);
+      color: white;
+      border: 2px solid rgba(255, 255, 255, 0.3);
+      border-radius: 5px;
+      padding: 8px 12px;
+      font-size: 20px;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    #fullscreenBtn:hover {
+      background: rgba(255, 255, 255, 0.3);
+      transform: scale(1.1);
+    }
+
+    #app h2 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      background: #1a1a1a;
+      color: #fff;
+      font-family: "Festive", sans-serif;
+      font-weight: 900;
+      -webkit-text-stroke: 2px black;
+      color: transparent;
+      background: linear-gradient(45deg,
+          #ff0000,
+          #ff7300,
+          #fffb00,
+          #48ff00,
+          #00ffd5,
+          #002bff,
+          #7a00ff,
+          #ff00c8);
+      background-size: 400% 400%;
+      -webkit-background-clip: text;
+      background-clip: text;
+      animation: gradientMove 10s ease infinite, float 3s ease-in-out infinite;
+      filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.5)) drop-shadow(0 0 30px rgba(255, 255, 255, 0.3)) drop-shadow(0 0 50px rgba(255, 255, 255, 0.1));
+    }
+
+    @keyframes gradientMove {
+      0% {
+        background-position: 0% 50%;
+      }
+
+      50% {
+        background-position: 100% 50%;
+      }
+
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    @keyframes float {
+
+      0%,
+      100% {
+        transform: rotatez(-1deg) skew(-5deg) translateY(-25px);
+      }
+
+      50% {
+        transform: rotatez(1deg) skew(5deg) translateY(-30px);
+      }
+    }
+
+    /* Phone User */
+    @media (max-width: 768px) {
+      #app h1 {
+        font-size: 3rem;
+      }
+    }
+  </style>
+</head>
+<div id="app">
+  <canvas id="canvas"></canvas>
+  <button id="fullscreenBtn">⤢</button>
+  <div id="hero">
+    <h1>Happy New Year</h1>
+  </div>
+</div>
+
+<body>
+  <script type="module">
+    import { Bokeh1Background } from "https://cdn.jsdelivr.net/npm/threejs-components@0.0.2/build/backgrounds/bokeh1.cdn.min.js";
+    const threeBackground = Bokeh1Background(document.getElementById("canvas"));
+    threeBackground.loadMap(
+      "https://cdn.jsdelivr.net/npm/threejs-components@0.0.2/build/assets/bokeh-particles2.png"
+    );
+
+    threeBackground.setColors([
+      0xffffff * Math.random(),
+      0xffffff * Math.random(),
+      0xffffff * Math.random()
+    ]);
+
+    document.body.addEventListener("click", () => {
+      threeBackground.setColors([
+        0xffffff * Math.random(),
+        0xffffff * Math.random(),
+        0xffffff * Math.random()
+      ]);
+    });
+
+    // Fullscreen toggle functionality
+    const fullscreenBtn = document.getElementById("fullscreenBtn");
+    fullscreenBtn.addEventListener("click", toggleFullScreen);
+
+    function toggleFullScreen() {
+      if (!document.fullscreenElement) {
+        document.documentElement.requestFullscreen();
+      } else {
+        if (document.exitFullscreen) {
+          document.exitFullscreen();
+        }
+      }
+    }
+
+  </script>
+</body>
+
+</html>
