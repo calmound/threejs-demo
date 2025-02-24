@@ -1,3 +1,26 @@
 {
-  "liveServer.settings.port": 5506
+  "liveServer.settings.port": 5506,
+  "glsl-canvas.format": {
+    "operators": {
+      "spaceAround": true,
+      "spaceAroundEqual": true
+    },
+    "commas": {
+      "spaceAfter": true
+    },
+    "functions": {
+      "spaceBeforeParentheses": true
+    },
+    "blocks": {
+      "spaceBeforeBraces": true,
+      "bracesAroundBody": true
+    },
+    "assignments": {
+      "spaceAroundEqual": true
+    },
+    "indentation": {
+      "spaces": 2,
+      "indent": true
+    }
+  }
 }

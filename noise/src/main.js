@@ -64,23 +64,10 @@ const material = new THREE.MeshPhongMaterial({
   shininess: 80, // 高光
   specular: 0xff00ff, // 镜面反射颜色
   wireframeLinewidth: 1, // 线框宽度
-  map: createGradientTexture(), // 使用渐变纹理
 });
 
 const terrain = new THREE.Mesh(geometry, material);
 scene.add(terrain);
-
-// 添加背景渐变
-const addBackgroundGradient = () => {
-  const geometry = new THREE.PlaneGeometry(400, 200);
-  const material = new THREE.MeshBasicMaterial({
-    side: THREE.BackSide,
-  });
-  const mesh = new THREE.Mesh(geometry, material);
-  mesh.position.z = -100;
-  mesh.position.y = 100;
-  scene.add(mesh);
-};
 
 // 添加光源
 const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
