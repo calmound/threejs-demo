@@ -17,6 +17,8 @@ void main() {
     myVector.x = 0.0;
     
     vec4 color = vec4(1.0, 0.0, 0.0, 1.0);
+
+    color
     
     gl_FragColor = vec4(1.0, sum(0.5, 0.5), 0.0, 1.0);
 }
