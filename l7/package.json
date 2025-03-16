@@ -1,0 +1,26 @@
+{
+  "name": "l7-world-map",
+  "version": "1.0.0",
+  "description": "L7 世界地图展示项目",
+  "main": "index.html",
+  "scripts": {
+    "start": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@antv/l7": "^2.17.2",
+    "@antv/l7-maps": "^2.17.2",
+    "antd": "^4.24.10"
+  },
+  "devDependencies": {
+    "vite": "^4.3.9"
+  },
+  "keywords": [
+    "l7",
+    "map",
+    "visualization"
+  ],
+  "author": "",
+  "license": "MIT"
+}

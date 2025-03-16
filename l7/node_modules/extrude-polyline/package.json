@@ -1,0 +1,59 @@
+{
+  "name": "extrude-polyline",
+  "version": "1.0.6",
+  "description": "triangulates a 2D polyline into a stroke",
+  "main": "index.js",
+  "license": "MIT",
+  "author": {
+    "name": "Matt DesLauriers",
+    "email": "dave.des@gmail.com",
+    "url": "https://github.com/mattdesl"
+  },
+  "dependencies": {
+    "as-number": "^1.0.0",
+    "gl-vec2": "^1.0.0",
+    "polyline-miter-util": "^1.0.1"
+  },
+  "devDependencies": {
+    "array-range": "^1.0.1",
+    "beefy": "^2.1.1",
+    "canvas-testbed": "^1.0.3",
+    "clamp": "^1.0.1",
+    "color-convert": "^0.5.2",
+    "color-style": "^1.0.0",
+    "draw-triangles-2d": "^1.0.0",
+    "randf": "^1.0.0",
+    "smoothstep": "^1.0.1",
+    "tape": "^3.0.3",
+    "touch-position": "^1.0.3"
+  },
+  "scripts": {
+    "test": "beefy test/test-draw.js --open",
+    "test-basic": "node test/test"
+  },
+  "keywords": [
+    "triangulate",
+    "line",
+    "rendering",
+    "lines",
+    "2d",
+    "poly",
+    "line",
+    "polyline",
+    "path",
+    "outline",
+    "stroke",
+    "gl",
+    "webgl",
+    "glsl",
+    "stackgl"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mattdesl/extrude-polyline.git"
+  },
+  "homepage": "https://github.com/mattdesl/extrude-polyline",
+  "bugs": {
+    "url": "https://github.com/mattdesl/extrude-polyline/issues"
+  }
+}
