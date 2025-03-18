@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>科幻城市雷达扫描</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        background-color: #000;
+      }
+
+      #canvas {
+        width: 100%;
+        height: 100%;
+        display: block;
+      }
+
+      .info {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        color: #fff;
+        font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+        font-size: 14px;
+        background: rgba(0, 0, 0, 0.7);
+        padding: 15px;
+        border-radius: 8px;
+        line-height: 1.8;
+        z-index: 100;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="canvas"></div>
+    <div class="info">
+      科幻城市雷达扫描效果
+      <br />
+      - 使用鼠标左键旋转视角
+      <br />
+      - 使用鼠标滚轮缩放场景
+      <br />
+      - 使用鼠标右键平移场景
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
