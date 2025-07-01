@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3D城市可视化</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background: #000;
+        font-family: Arial, sans-serif;
+      }
+
+      #container {
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container"></div>
+
+    <!-- Dependencies -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js"></script>
+    <script src="https://unpkg.com/three@0.85.0/build/three.min.js"></script>
+    <script src="https://unpkg.com/three@0.85.0/examples/js/Detector.js"></script>
+    <script src="https://unpkg.com/three@0.85.0/examples/js/controls/TrackballControls.js"></script>
+
+    <!-- Main Application -->
+    <script src="index.js"></script>
+  </body>
+</html>
