@@ -11,6 +11,7 @@
         overflow: hidden;
         background: #000;
         font-family: Arial, sans-serif;
+        color: white;
       }
 
       #container {
@@ -18,18 +19,109 @@
         width: 100vw;
         height: 100vh;
       }
+
+      /* 相机控制按钮样式 */
+      .camera-controls {
+        position: absolute;
+        bottom: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 100;
+        display: flex;
+        gap: 15px;
+        background: rgba(0, 0, 0, 0.7);
+        padding: 15px 20px;
+        border-radius: 15px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(10px);
+      }
+
+      .camera-btn {
+        background: rgba(255, 255, 255, 0.1);
+        border: 2px solid rgba(255, 255, 255, 0.3);
+        color: white;
+        padding: 12px 20px;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 14px;
+        font-weight: bold;
+        transition: all 0.3s ease;
+        backdrop-filter: blur(5px);
+        min-width: 80px;
+        text-align: center;
+      }
+
+      .camera-btn:hover {
+        background: rgba(255, 255, 255, 0.2);
+        border-color: rgba(255, 255, 255, 0.5);
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+      }
+
+      .camera-btn.active {
+        background: rgba(251, 53, 80, 0.8);
+        border-color: rgba(251, 53, 80, 1);
+        box-shadow: 0 0 20px rgba(251, 53, 80, 0.5);
+      }
+
+      .camera-btn.active:hover {
+        background: rgba(251, 53, 80, 0.9);
+      }
+      /* 当前模式显示 */
+      .current-mode {
+        position: absolute;
+        top: 50%;
+        right: 30px;
+        transform: translateY(-50%);
+        z-index: 100;
+        background: rgba(0, 0, 0, 0.8);
+        padding: 10px 15px;
+        border-radius: 8px;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        backdrop-filter: blur(10px);
+        font-size: 12px;
+        color: rgba(255, 255, 255, 0.9);
+        text-align: center;
+      }
+
+      .mode-name {
+        color: #ff6b6b;
+        font-weight: bold;
+        font-size: 14px;
+        margin-bottom: 5px;
+      }
     </style>
   </head>
   <body>
     <div id="container"></div>
 
-    <!-- Dependencies -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js"></script>
-    <script src="https://unpkg.com/three@0.85.0/build/three.min.js"></script>
-    <script src="https://unpkg.com/three@0.85.0/examples/js/Detector.js"></script>
-    <script src="https://unpkg.com/three@0.85.0/examples/js/controls/TrackballControls.js"></script>
+    <!-- 相机控制按钮 -->
+    <div class="camera-controls">
+      <button class="camera-btn active" id="circleBtn" data-mode="circle">
+        🔄 圆形轨道
+      </button>
+      <button class="camera-btn" id="figure8Btn" data-mode="figure8">
+        ∞ 8字路径
+      </button>
+      <button class="camera-btn" id="spiralBtn" data-mode="spiral">
+        🌀 螺旋塔
+      </button>
+      <button class="camera-btn" id="waveBtn" data-mode="wave">
+        🌊 海浪漫游
+      </button>
+    </div>
+
+    <!-- Import Map -->
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://unpkg.com/three@0.178.0/build/three.module.js",
+          "gsap": "https://unpkg.com/gsap@3.13.0/index.js"
+        }
+      }
+    </script>
 
     <!-- Main Application -->
-    <script src="index.js"></script>
+    <script type="module" src="index.js"></script>
   </body>
 </html>
